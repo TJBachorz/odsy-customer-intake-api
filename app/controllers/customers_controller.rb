@@ -2,13 +2,12 @@ class CustomersController < ApplicationController
 
     def create
         @customer = Customer.new(customer_params)
-        if @customer.valid?
-            @customer.save
+
+        if @customer.save
             render json: @customer
         else
             render json: @customer.errors.full_messages
         end
-        
     end
 
     private
