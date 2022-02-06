@@ -6,27 +6,16 @@ class CustomersController < ApplicationController
     end
 
     def create
-        @customer = Customer.new(customer_params)
+        new_customers = []
 
-        if @customer.save
-            render json: @customer
-        else
-            render json: @customer.errors.full_messages
-        end
-    end
-
-    private
-
-    def customer_params
-        params
-            .require(:customer)
-            .permit(
-                :first_name,
-                :last_name,
-                :email,
-                :vehicle_type,
-                :vehicle_name,
-                :vehicle_length
-            )
+        customer_data = CustomerDataFileParser.sanitize(params.keys[0])
+        customer_data.map {|customer|
+            @customer = Customer.new(customer)
+            if @customer.valid?
+                @customer.save
+                new_customers << @customer
+            end
+        }
+        render json: new_customers
     end
 end
