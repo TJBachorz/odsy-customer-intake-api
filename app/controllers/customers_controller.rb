@@ -4,11 +4,11 @@ class CustomersController < ApplicationController
         @customers = Customer.all
 
         if params[:vehicle_type]
-            @customers = Customer.all.sort_by { |customer| customer[:vehicle_type].upcase }
+            @customers = @customers.sort_by { |customer| customer[:vehicle_type].upcase }
         end
 
         if params[:full_name]
-            @customers = Customer.all.sort_by { |customer| customer[:first_name].upcase }
+            @customers = @customers.sort_by { |customer| customer[:first_name].upcase }
         end
 
         if params[:desc]
@@ -22,7 +22,7 @@ class CustomersController < ApplicationController
         new_customers = []
 
         customer_data = CustomerDataFileParser.sanitize(params.keys[0])
-        customer_data.map {|customer|
+        customer_data.map { |customer|
             @customer = Customer.new(customer)
             if @customer.valid?
                 @customer.save
@@ -30,17 +30,5 @@ class CustomersController < ApplicationController
             end
         }
         render json: new_customers
-    end
-
-    def name_sort
-        byebug
-
-        puts test
-    end
-
-    def vehicle_sort
-        byebug
-
-        puts test
     end
 end
