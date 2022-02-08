@@ -38,6 +38,10 @@ Additionally, the API features an index method that accepts a variety of query p
 
 `GET` to `/customers?vehicle_type=&asc=` -- All Customers sorted by vehicle type (ascending or descending)
 
+Validations have also been implemented in order to verify the presence of all fields and the uniqueness of email addresses so duplicate customer fields aren't entered into the database.  Vehicle length has also been restricted to numerics only.
+
+[<img src="https://i.imgur.com/CFF03CC.png"/>](https://i.imgur.com/CFF03CC.png)
+
 
 ## Technologies
 
