@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_05_184546) do
+ActiveRecord::Schema.define(version: 2022_02_07_163030) do
 
   create_table "customers", force: :cascade do |t|
     t.string "first_name"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2022_02_05_184546) do
     t.string "email"
     t.string "vehicle_type"
     t.string "vehicle_name"
-    t.string "vehicle_length"
+    t.integer "vehicle_length"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

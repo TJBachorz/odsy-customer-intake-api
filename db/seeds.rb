@@ -13,7 +13,7 @@ test = Customer.new(
     email: "test",
     vehicle_type: "test",
     vehicle_name: "test",
-    vehicle_length: "test"
+    vehicle_length: 20
 )
 
 test.save

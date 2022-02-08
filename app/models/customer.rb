@@ -4,5 +4,5 @@ class Customer < ApplicationRecord
     validates :email, presence: true, uniqueness: true, length: { maximum: 255 }
     validates :vehicle_type, presence: true, length: { maximum: 255 }
     validates :vehicle_name, presence: true, length: { maximum: 255 }
-    validates :vehicle_length, presence: true, length: { maximum: 255 }
+    validates :vehicle_length, presence: true, length: { maximum: 4 }, numericality: { only_integer: true }
 end
