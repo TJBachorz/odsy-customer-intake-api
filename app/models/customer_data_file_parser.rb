@@ -1,13 +1,13 @@
 class CustomerDataFileParser
 
     def self.sanitize(file)
-        customers = []
-
         customer_data = file.split("\n")
-        separated_customer_data = customer_data.map { |customer| 
+
+        customer_data_list = customer_data.map { |customer| 
             customer.split(/[,|\n||]/)
         }
-        separated_customer_data.map { |customer|
+
+        customer_data_list.map { |customer|
             {
                 :first_name => customer[0],
                 :last_name => customer[1],
