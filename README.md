@@ -20,6 +20,8 @@ followed by...
 
 Note: It is important to run the API on the default `Port: 3000` otherwise it will take more effort to change the environment variable in the webapp to allow requests to come through.
 
+If the server is running, then you're all set!  Next, let's spin up the [webapp!](https://github.com/TJBachorz/odsy-customer-intake-webapp)
+
 ## About
 
 Outdoor.sy is a fictional company with a problem.  They have lists of customers on .txt files that they need saved to a database.  This API is designed to solve that problem by receiving POST requests consisting of raw .txt files.  The files are filtered through a custom built `CustomerDataFileParser` class, shown below:
