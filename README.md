@@ -1,6 +1,6 @@
 # Outdoor.sy API
 
->Customer data storage, sorting, and parsing
+>Customer data storage, sorting, and file parsing
 
 ## Table of Contents
 * [About](#about)
