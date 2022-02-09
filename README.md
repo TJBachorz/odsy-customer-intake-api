@@ -14,7 +14,13 @@ Clone down this repo into a directory of your choice and begin by running:
 
 #### `bundle install`
 
-followed by...
+Depending on what version or Ruby you have installed, you might get a variety of errors on bundle install.  Pay attention to what commands the errors suggest you run to try to solve the issue.  In some cases you may need to change the version of Ruby in the `Gemfile` to one suggested by the terminal.
+
+Once you've successfully ran the command, you can now run...
+
+#### `rails db:migrate RAILS_ENV=development`
+
+This will set up your local SQLite3 database with the tables necessary to run the API.  Upon successful migration we can now start the server by running...
 
 #### `rails s`
 
@@ -28,7 +34,7 @@ Outdoor.sy is a fictional company with a problem.  They have lists of customers 
 
 [<img src="https://i.imgur.com/MIqudHo.png" height="450" width="600"/>](https://i.imgur.com/MIqudHo.png)
 
-The parser sanitizes the data and returns a "clean" list of customers which are then modelled, stored in the data base, and returned in the response to the user.  
+The parser sanitizes the data and returns a "clean" list of customers which are then stored in the data base, and returned in the response to the user.  
 
 Additionally, the API features an index method that accepts a variety of query params for sorting customers:
 
