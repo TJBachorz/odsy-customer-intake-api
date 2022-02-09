@@ -48,6 +48,7 @@ Validations have also been implemented in order to verify the presence of all fi
 * Ruby
 * Ruby on Rails
 * SQLite3
+* Rspec
 
 ## Contact
 
