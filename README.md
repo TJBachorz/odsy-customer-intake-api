@@ -13,7 +13,7 @@
 
 Outdoor.sy is a fictional company with a problem.  They have lists of customers on .txt files that they need saved to a database.  This API is designed to solve that problem by receiving POST requests consisting of raw .txt files.  The files are filtered through a custom built `CustomerDataFileParser` class, shown below:
 
-[<img src="https://i.imgur.com/MIqudHo.png" height="450" width="600"/>](https://i.imgur.com/MIqudHo.png)
+[<img src="https://i.imgur.com/MIqudHo.png" alt="The CustomerDataFileParser class definition in code" height="450" width="600"/>](https://i.imgur.com/MIqudHo.png)
 
 The parser sanitizes the data and returns a "clean" list of customers which are then stored in the data base, and returned in the response to the user.  
 
@@ -27,7 +27,7 @@ Additionally, the API features an index method that accepts a variety of query p
 
 Validations have also been implemented in order to verify the presence of all fields and the uniqueness of email addresses so duplicate customer fields aren't entered into the database.  Vehicle length has also been restricted to numerics only.
 
-[<img src="https://i.imgur.com/CFF03CC.png"/>](https://i.imgur.com/CFF03CC.png)
+[<img src="https://i.imgur.com/CFF03CC.png" alt="The validations for the Customer class"/>](https://i.imgur.com/CFF03CC.png)
 
 ## Getting Started
 
