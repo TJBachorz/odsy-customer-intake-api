@@ -8,7 +8,7 @@ RSpec.describe Customer, type: :model do
       email: "test",
       vehicle_type: "test",
       vehicle_name: "test",
-      vehicle_length: "test"
+      vehicle_length: 24
     )
     expect(customer).to be_valid
   end
@@ -32,8 +32,8 @@ RSpec.describe Customer, type: :model do
     customer = Customer.new(vehicle_name: nil)
     expect(customer).to_not be_valid
   end
-  it "is not valid without a vehicle length" do
-    customer = Customer.new(vehicle_length: nil)
+  it "is not valid when vehicle length is a string" do
+    customer = Customer.new(vehicle_length: "24")
     expect(customer).to_not be_valid
   end
 end
