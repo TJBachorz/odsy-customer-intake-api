@@ -8,26 +8,6 @@
 * [Technologies](#technologies)
 * [Contact](#contact)
 
-## Getting Started
-
-Clone down this repo into a directory of your choice and begin by running:
-
-#### `bundle install`
-
-Depending on what version or Ruby you have installed, you might get a variety of errors on bundle install.  Pay attention to what commands the errors suggest you run to try to solve the issue.  In some cases you may need to change the version of Ruby in the `Gemfile` to one suggested by the terminal.
-
-Once you've successfully ran the command, you can now run...
-
-#### `rails db:migrate RAILS_ENV=development`
-
-This will set up your local SQLite3 database with the tables necessary to run the API.  Upon successful migration we can now start the server by running...
-
-#### `rails s`
-
-Note: It is important to run the API on the default `Port: 3000` otherwise it will take more effort to change the environment variable in the webapp to allow requests to come through.
-
-If the server is running, then you're all set!  Next, let's spin up the [webapp!](https://github.com/TJBachorz/odsy-customer-intake-webapp)
-
 ## About
 
 Outdoor.sy is a fictional company with a problem.  They have lists of customers on .txt files that they need saved to a database.  This API is designed to solve that problem by receiving POST requests consisting of raw .txt files.  The files are filtered through a custom built `CustomerDataFileParser` class, shown below:
@@ -48,6 +28,25 @@ Validations have also been implemented in order to verify the presence of all fi
 
 [<img src="https://i.imgur.com/CFF03CC.png"/>](https://i.imgur.com/CFF03CC.png)
 
+## Getting Started
+
+Clone down this repo into a directory of your choice and begin by running:
+
+#### `bundle install`
+
+Depending on what version or Ruby you have installed, you might get a variety of errors on bundle install.  Pay attention to what commands the errors suggest you run to try to solve the issue.  In some cases you may need to change the version of Ruby in the `Gemfile` to one suggested by the terminal.
+
+Once you've successfully ran the command, you can now run...
+
+#### `rails db:migrate RAILS_ENV=development`
+
+This will set up your local SQLite3 database with the tables necessary to run the API.  Upon successful migration we can now start the server by running...
+
+#### `rails s`
+
+Note: It is important to run the API on the default `Port: 3000` otherwise it will take more effort to change the environment variable in the webapp to allow requests to come through.
+
+If the server is running, then you're all set!  Next, let's spin up the [webapp!](https://github.com/TJBachorz/odsy-customer-intake-webapp)
 
 ## Technologies
 
