@@ -3,8 +3,8 @@
 >Customer data storage, sorting, and parsing
 
 ## Table of Contents
-* [Getting Started](#getting-started)
 * [About](#about)
+* [Getting Started](#getting-started)
 * [Technologies](#technologies)
 * [Contact](#contact)
 
