@@ -5,6 +5,7 @@
 ## Table of Contents
 * [About](#about)
 * [Getting Started](#getting-started)
+* [To-dos](#to-dos)
 * [Technologies](#technologies)
 * [Contact](#contact)
 
@@ -47,6 +48,14 @@ This will set up your local SQLite3 database with the tables necessary to run th
 Note: It is important to run the API on the default `Port: 3000` otherwise it will take more effort to change the environment variable in the webapp to allow requests to come through.
 
 If the server is running, then you're all set!  Next, let's spin up the [webapp!](https://github.com/TJBachorz/odsy-customer-intake-webapp)
+
+## To-Dos
+
+TESTING!  Currently the API only includes smoke tests for the validations on the core Customer model.  Going forward I'd like to implement more Rspec tests that put the API calls through the gauntlet to ensure that calls are behaving correctly in all circumstances.
+
+If you're curious and would like to run these tests yourself, navigate to the root directory of this project and run...
+
+`rspec ./spec/models/customer_spec.rb`
 
 ## Technologies
 
